@@ -1,0 +1,145 @@
+//
+// Your Custom Styles //
+//
+
+
+.navabout {
+  position: right;
+  padding: 0;
+  color: $color-white;
+  font: 400 16px "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: linear 0.1s;
+  transition: linear 0.1s;
+}
+
+
+.carouselimage {
+    float: left;
+    clear: both;
+
+    position: relative;
+    overflow: auto;
+
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    font-size: 15px;
+}
+
+.carouselimage img {
+	vertical-align: bottom;
+}
+
+.carouselimage imgcaption {
+    position: absolute;
+    z-index: 994;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: rgba(0,0,0,0.3);
+    text-align: left;
+    color: $color-white-09;
+    font-weight: $font-weight-medium;
+    padding: 10px;
+    padding-left: 25px;
+}
+
+
+//
+// LinkedIn position //
+//
+.linkedinlogo {
+	position: relative;
+	right: 0px;
+	bottom: 0px;
+
+}
+
+//
+// Show projects button //
+//
+.showprojectsbutton {
+	@include transform(translateY(-100px));
+	z-index: 994;
+	visibility: hidden;
+	opacity: 0;
+	@include transition(ease-out 0.4s);
+	&.showprojectsbutton-show {
+		@include transform(translateY(0px));
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+//
+// About Me box //
+//
+.aboutme-text {
+  color: $color-black;
+	text-align: center;
+  font: 20px "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: linear 0.1s;
+  transition: linear 0.1s;
+
+}
+.aboutme-box {
+	max-width: 730px;
+	text-align: center;
+	margin: 0 auto;
+	img {
+		width: 175px;
+		height: 175px;
+		border-radius: 50%;
+		margin-right: auto;
+		margin-left: auto;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			opacity: 0;
+			background: $color-white-03;
+			width: 100%;
+			height: 100%;
+			@include transition(ease-out 0.2s);
+		}
+			&:hover {
+			.portfolio-img {
+				img {
+					@include transform(scale(1.01));
+					@include filter(blur(0));
+				}
+				&:before {
+					opacity: 1;
+				}
+			}
+		}	
+}
+
+//
+// Photo credit position //
+//
+.photocredit {
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+	text-justify: right;
+	font-style: italic;
+}
+
+//
+// Center full-width image //
+//
+.centerfullwidth {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}

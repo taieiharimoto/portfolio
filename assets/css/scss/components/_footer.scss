@@ -1,0 +1,13 @@
+//
+// Footer Styles //
+//
+
+.footer-bottom {
+	padding: 25px 0;
+	.row {
+		margin-bottom: -20px;
+		div[class^="col-"], div[class*=" col-"] {
+			margin-bottom: 20px;
+		}
+	}
+}
