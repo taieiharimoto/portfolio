@@ -23,6 +23,14 @@ $(function() {
           speed: .4
       })
 
+  $(".parallax-6").jarallax({
+        speed: .6
+    })
+
+  $(".parallax-8").jarallax({
+        speed: .8
+    })  
+
 
   /*===============================================
     Navbar Menu
@@ -162,6 +170,7 @@ $(function() {
   /*===============================================
     Owl Carousel Sliders
   ===============================================*/
+$(".owl-carousel").imagesLoaded( function() {
   $(".owl-carousel").each( function() {
     var $carousel = $(this);
 
@@ -248,6 +257,7 @@ $(function() {
   });
   homePortfolioPrev.on("click", function(){
     $("#homePortfolioSlider").trigger("prev.owl.carousel", [300]);
+  });
   });
   
 
